@@ -1,0 +1,571 @@
+body {
+  overflow-x: hidden;
+
+}
+
+.h1 {
+  padding-right: 280px;
+  position: relative;
+font-size: 40px;
+
+}
+
+.input-container {
+  position: relative;
+  width: 200px;
+  height: 35px;
+  padding-left: 50px;
+  left: 60px;
+  
+
+}
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+#search {
+  width: 100%;
+  padding: 8px 32px 8px 8px;
+  /* Espaço extra à direita para o ícone */
+  box-sizing: border-box;
+  height: 35px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent; /* fundo inicialmente transparente */
+  transition: background-color 0.3s ease; /* transição suave para mudanças de cor */
+  z-index: 1000; /* certifique-se de que o navbar esteja sobre o conteúdo */
+}
+
+/* Adiciona o fundo preto ao navbar quando o usuário rolar a página */
+.navbar.scrolled {
+  background-color: #000; /* altere para a cor desejada */
+}
+nav.scrolled .p, nav.scrolled .fa-regular, nav.scrolled .fa-solid {
+  color: white; /* Mudando a cor do texto dos links dentro da navegação quando a classe 'scrolled' é adicionada */
+}
+nav.scrolled h1 {
+  color: white;
+}
+nav.scrolled .linha {
+  display: none;
+}
+
+.btn-search {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-search svg {
+  fill: #000;
+  /* Cor do ícone */
+}
+
+.li2 {
+  list-style: none;
+  padding-left: 80px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-decoration: none;
+  color: #000;
+  transition: .4s;
+
+}
+
+
+
+
+
+.p {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  display: flex;
+
+
+}
+
+.ul2 {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  display: flex;
+  right: 50px;
+  top: 15px;
+  
+}
+
+
+#user {
+  position: relative;
+  left: 10px;
+  font-size: 25px;
+  cursor: pointer;
+ 
+ 
+}
+#carrinho:hover{
+  color: #616161;
+}
+#carrinho{
+  font-size: 25px;
+  position: relative;
+  transition: .4s;
+  cursor: pointer;
+  position: relative;
+  right: 50px;
+}
+.li2 a {
+  text-decoration: none;
+  color: #000000;
+  position: relative;
+  white-space: nowrap;
+
+}
+
+nav a{
+  position: relative;
+}
+.li2 a::after {
+  content: " ";
+  width: 0%;
+  height: 2px;
+  background-color: #000000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s ease-in-out;
+
+}
+.li2 a:hover::after{
+  width: 100%;
+  
+}
+.linha{
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  position: relative;
+  top: 10px;
+}
+.nome{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 150px;
+  font-family: "Inter", sans-serif;
+font-optical-sizing: auto;
+
+font-style: normal;
+}
+.product-grid {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  top: 100px;
+  position: relative;
+  width: 200px; /* Ajuste a largura do card */
+  margin: 0 auto; /* Centraliza o card horizontalmente */
+  left: 140px;
+  
+
+  
+}
+.cards{
+  position: relative;
+  right: 30px;
+}
+.cards2{
+  top: 30px;
+  position: relative;
+}
+
+
+.product-grid .product-image {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  height: 250px; /* Ajuste a altura da imagem */
+}
+
+.product-grid .product-image a.image {
+  display: block;
+}
+
+.product-grid .product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mantém a proporção da imagem */
+}
+
+.product-grid .product-discount-label {
+  color: #fff;
+  background: #000000;
+  font-size: 12px; /* Ajuste o tamanho da fonte */
+  font-weight: 600;
+  line-height: 20px; /* Ajuste a altura da linha */
+  padding: 0 15px; /* Ajuste o padding */
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+
+.product-grid .product-links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: absolute;
+  top: 10px;
+  right: -40px; /* Ajuste a posição inicial */
+  transition: all .5s ease 0s;
+}
+
+.product-grid:hover .product-links {
+  right: 10px;
+}
+
+.product-grid .product-links li a {
+  color: #333;
+  background: transparent;
+  font-size: 15px; /* Ajuste o tamanho da fonte */
+  line-height: 34px; /* Ajuste a altura da linha */
+  width: 34px; /* Ajuste a largura */
+  height: 34px; /* Ajuste a altura */
+  border: 1px solid #333;
+  border-bottom: none;
+  display: block;
+  transition: all 0.3s;
+}
+
+.product-grid .product-links li:last-child a {
+  border-bottom: 1px solid #333;
+}
+
+.product-grid .product-links li a:hover {
+  color: #fff;
+  background: #333;
+}
+
+.product-grid .add-to-cart {
+  background: #000000;
+  color: #fff;
+  font-size: 14px; /* Ajuste o tamanho da fonte */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  width: 100%;
+  padding: 8px 20px; /* Ajuste o padding */
+  position: absolute;
+  left: 0;
+  bottom: -50px; /* Ajuste a posição inicial */
+  transition: all 0.3s ease 0s;
+}
+
+.product-grid:hover .add-to-cart {
+  bottom: 0;
+}
+
+.product-grid .add-to-cart:hover {
+  text-shadow: 4px 4px rgba(0,0,0,0.2);
+}
+
+.product-grid .product-content {
+  background: #fff;
+  padding: 10px; /* Ajuste o padding */
+  box-shadow: 0 0 0 4px rgba(0,0,0,0.1) inset; /* Ajuste a sombra */
+}
+
+.product-grid .title {
+  font-size: 14px; /* Ajuste o tamanho da fonte */
+  font-weight: 600;
+  text-transform: capitalize;
+  margin: 0 0 5px; /* Ajuste a margem */
+}
+
+.product-grid .title a {
+  color: #777;
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+}
+
+.product-grid .title a:hover {
+  color: #000000;
+}
+
+.product-grid .price {
+  color: #0d0d0d;
+  font-size: 12px; /* Ajuste o tamanho da fonte */
+  font-weight: 600;
+}
+
+.product-grid .price span {
+  color: #888;
+  font-size: 11px; /* Ajuste o tamanho da fonte */
+  font-weight: 400;
+  text-decoration: line-through;
+}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+.footer {
+  position: absolute;
+  top: 180vh;
+ 
+  
+  
+  width: 100vw;
+  background: #000000;
+  border-radius: 6px;
+}
+.footer .footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3.5rem;
+  padding: 60px;
+}
+.footer-row .footer-col h4 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.footer-col .links {
+  margin-top: 20px;
+}
+.footer-col .links li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+.footer-col .links li a {
+  text-decoration: none;
+  color: #bfbfbf;
+}
+.footer-col .links li a:hover {
+  color: #fff;
+}
+.footer-col p {
+  margin: 20px 0;
+  color: #bfbfbf;
+  max-width: 300px;
+}
+.footer-col form {
+  display: flex;
+  gap: 5px;
+}
+.footer-col input {
+  height: 40px;
+  border-radius: 6px;
+  background: none;
+  width: 100%;
+  outline: none;
+  border: 1px solid #ffffff ;
+  caret-color: #fff;
+  color: #fff;
+  padding-left: 10px;
+}
+.footer-col input::placeholder {
+  color: #ccc;
+}
+ .footer-col form button {
+  background: #fff;
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+.footer-col form button:hover {
+  background: #cecccc;
+}
+.footer-col .icons {
+  display: flex;
+  margin-top: 30px;
+  gap: 30px;
+  cursor: pointer;
+}
+.footer-col .icons i {
+  color: #afb6c7;
+}
+.footer-col .icons i:hover  {
+  color: #fff;
+}
+
+
+.back-to-top {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#back-to-top-btn {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  color: #000000;
+  font-size: 20px;
+  transition: background-color 0.3s;
+}
+
+#back-to-top-btn:hover {
+  background-color: #333;
+}
+
+#back-to-top-btn svg {
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 990px) {
+  .product-grid {
+      margin-bottom: 30px;
+      width: 100%; /* Ajusta a largura para dispositivos menores */
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .product-grid {
+      margin-bottom: 30px;
+      width: 100%; /* Ajusta a largura para dispositivos menores */
+  }
+}
+@media (max-width: 768px) {
+  .ul2 {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .navbar.scrolled .ul2 {
+    background-color: #000;
+  }
+  .cards{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
+  }
+  .image{
+    height: 400px;
+    position: relative;
+    
+  }
+  body{
+    overflow-x: hidden;
+  }
+  .navbar.scrolled{
+    height: 70px;
+  }
+}
+
+
+@media (max-width: 48em) {
+  .main_footer .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+   .footers{
+    position: relative;
+    right: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .ul2 {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100%;
+    background-color: #23232e;
+    transition: right 0.3s ease-in-out;
+    z-index: 1;
+  }
+  .linha{
+    display: none;
+  }
+
+  .ul2.active {
+    right: 0;
+  }
+
+  .li2 {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+
+  .mobile-menu {
+    display: block;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #ffffff;
+    margin: 8px;
+    transition: 0.3s;
+  }
+
+  .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .mobile-menu.active .line2 {
+    opacity: 0;
+  }
+
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  .footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    border-radius: 0;
+    top: 250px;
+  }
+  .footer .footer-row {
+    padding: 20px;
+    gap: 1rem;
+  }
+  .footer-col form {
+    display: block;
+  }
+  .footer-col form :where(input, button) {
+    width: 100%;
+  }
+  .footer-col form button {
+    margin: 10px 0 0 0;
+  }
+}
