@@ -505,6 +505,8 @@ font-style: normal;
     align-items: center;
     justify-content: center;
     display: flex;
+    position: relative;
+  right: 20%;
     
   }
   .image{
